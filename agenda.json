@@ -1,0 +1,14 @@
+[
+    {
+        "titulo": "Reuni\u00f3n con el cliente",
+        "fecha_hora": "2025-12-04T14:33:06.972000",
+        "prioridad": 2,
+        "categoria": "Sin Asignar"
+    },
+    {
+        "titulo": "Entregar el c\u00f3digo de Python",
+        "fecha_hora": "2025-12-02T18:33:06.972000",
+        "prioridad": 1,
+        "categoria": "Sin Asignar"
+    }
+]
