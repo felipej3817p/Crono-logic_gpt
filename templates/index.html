@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crono-Logic | Priorización IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Crono-Logic V3.0</h1>
+        <p>Tu Agenda con Priorización Inteligente</p>
+    </header>
+
+    <main>
+        <h2>🗓️ Tareas Pendientes Ordenadas</h2>
+        
+        <section class="task-list">
+        {% if eventos %}
+            {% for evento in eventos %}
+                {# Asigna la clase de color según la prioridad #}
+                {% set prioridad_class = 'p' + evento.prioridad|string %}
+                <div class="task-item {{ prioridad_class }}">
+                    <div class="task-priority">P{{ evento.prioridad }}</div>
+                    <div class="task-details">
+                        <span class="task-title">{{ evento.titulo }}</span>
+                        <span class="task-meta">Categoría: {{ evento.categoria }} | Fecha: {{ evento.fecha_hora.strftime('%Y-%m-%d %H:%M') }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-tasks">¡Felicidades! No tienes eventos cargados en este momento.</p>
+        {% endif %}
+        </section>
+
+        <footer>
+            <p>Trabajo final de backend con Python y Flask.</p>
+        </footer>
+    </main>
+</body>
+</html>

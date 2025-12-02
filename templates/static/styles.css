@@ -1,0 +1,147 @@
+/* static/styles.css */
+
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+header p {
+    margin-top: 5px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin-top: 130px; /* Espacio para el header fijo */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- Estilos de las Tareas --- */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+}
+
+.task-priority {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    min-width: 40px;
+    text-align: center;
+    margin-right: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.task-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.task-meta {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.no-tasks {
+    text-align: center;
+    color: #999;
+    padding: 30px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+}
+
+/* --- COLORES DE PRIORIDAD (La magia de la IA) --- */
+
+/* Prioridad 1-3: ALTA (Rojo / Crítico) */
+.p1, .p2, .p3 {
+    border-left: 5px solid #dc3545;
+}
+.p1 .task-priority, .p2 .task-priority, .p3 .task-priority {
+    background-color: #dc3545; /* Rojo */
+}
+
+/* Prioridad 4-7: MEDIA (Naranja / Importante) */
+.p4, .p5, .p6, .p7 {
+    border-left: 5px solid #ffc107;
+}
+.p4 .task-priority, .p5 .task-priority, .p6 .task-priority, .p7 .task-priority {
+    background-color: #ffc107; /* Naranja */
+}
+
+/* Prioridad 8-10: BAJA (Verde / Ocio) */
+.p8, .p9, .p10 {
+    border-left: 5px solid #28a745;
+}
+.p8 .task-priority, .p9 .task-priority, .p10 .task-priority {
+    background-color: #28a745; /* Verde */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    color: #999;
+    font-size: 0.85em;
+}
